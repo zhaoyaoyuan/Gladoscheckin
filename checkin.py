@@ -41,7 +41,7 @@ if __name__ == '__main__':
             result = checkin.json()     
             # 获取签到结果
             status = result.get('message')
-
+            point = next(result.get('list')).get('balance')
             # 获取账号当前状态
             result = state.json()
             # 获取剩余时间
@@ -71,8 +71,8 @@ if __name__ == '__main__':
         sendContent += f"{'-'*30}\n\
             账号: {email}\n\
             签到情况: {message_status}\n\
-            剩余天数: {message_days}\n"
-        
+            剩余天数: {message_days}\n
+            当前点数: {point}\n"
         if cookie == cookies[-1]:
             sendContent += '-' * 30
         

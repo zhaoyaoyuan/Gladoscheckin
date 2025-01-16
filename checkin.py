@@ -41,7 +41,7 @@ if __name__ == '__main__':
             result = checkin.json()     
             # 获取签到结果
             status = result.get('message')
-            point = next(result.get('list')).get('balance')
+            point = result.get('list')[0].get('balance')
             # 获取账号当前状态
             result = state.json()
             # 获取剩余时间

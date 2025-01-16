@@ -71,7 +71,7 @@ if __name__ == '__main__':
         sendContent += f"{'-'*30}\n\
             账号: {email}\n\
             签到情况: {message_status}\n\
-            剩余天数: {message_days}\n
+            剩余天数: {message_days}\n\
             当前点数: {point}\n"
         if cookie == cookies[-1]:
             sendContent += '-' * 30
